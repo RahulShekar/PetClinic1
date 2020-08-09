@@ -4,7 +4,7 @@ pipeline {
     stage ('Build') {
       steps{
         echo "Building Project"
-        ./mvnw package
+        sh './mvnw package'
       }
     }
     stage ('Archive') {
