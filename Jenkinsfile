@@ -1,7 +1,7 @@
 pipeline {
   environment {
     registry = "rahulshekar/petclinic"
-    registerCredential = 'docker_hub_RahulShekar'
+    registryCredential = 'docker_hub_RahulShekar'
     dockerImage = ''
   }
   agent any
@@ -30,7 +30,7 @@ pipeline {
       steps{
         echo "Pushing Docker Image"
         script {
-      docker.withRegistry( '', registerCredential ) {
+      docker.withRegistry( '', registryCredential ) {
         dockerImage.push()
           }
         }
