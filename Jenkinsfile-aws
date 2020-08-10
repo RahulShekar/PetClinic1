@@ -3,7 +3,7 @@ pipeline {
    stages{
     stage ('Create AWS Stack') {
     steps {
-    echo "Creating AWS CloudFormation Stack"
+    echo 'Creating AWS CloudFormation Stack'
     }
     }
     }
