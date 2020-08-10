@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "rahulshekar/petclinic"
+    registry = 'rahulshekar/petclinic'
     registryCredential = 'docker_hub_RahulShekar'
     dockerImage = ''
   }
