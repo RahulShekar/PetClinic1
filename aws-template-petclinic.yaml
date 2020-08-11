@@ -23,7 +23,7 @@ Resources:
       UserData:
         Fn::Base64: |
           #!/bin/bash -xe
-        yam update -y
+        yum update -y
         amazon-linux-extras install docker
         yum install docker
         service docker start
@@ -43,7 +43,7 @@ Resources:
       UserData:
         Fn::Base64: |
           #!/bin/bash -xe
-          yam update -y
+          yum update -y
           amazon-linux-extras install docker
           yum install docker
           service docker start
