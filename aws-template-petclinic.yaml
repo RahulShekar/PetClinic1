@@ -23,12 +23,12 @@ Resources:
       UserData:
         Fn::Base64: |
           #!/bin/bash -xe
-          yum update -y
-          amazon-linux-extras install docker
-          yum install docker
-          service docker start
-          usermod -a -G docker ec2-user
-          docker run -d --name=petclinic -p 8081:8080 prabhavagrawal/petclinic
+        yam update -y
+        amazon-linux-extras install docker
+        yum install docker
+        service docker start
+        usermod -a -G docker ec2-user
+        docker run -d --name=petclinic -p 8081:8080 rahulshekar/petclinic
 
   MyInstance2:
     Type: AWS::EC2::Instance
@@ -43,12 +43,12 @@ Resources:
       UserData:
         Fn::Base64: |
           #!/bin/bash -xe
-          yum update -y
+          yam update -y
           amazon-linux-extras install docker
           yum install docker
           service docker start
           usermod -a -G docker ec2-user
-          docker run -d --name=petclinic -p 8081:8080 prabhavagrawal/petclinic
+          docker run -d --name=petclinic -p 8081:8080 rahulshekar/petclinic
 
   ELBSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
